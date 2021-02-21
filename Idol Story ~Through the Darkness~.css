@@ -1,0 +1,342 @@
+body {
+	color: rgb(235, 235, 235);
+	font-family: Jost Regular, Muli, Century Gothic, Sarabun, MotoyaLMaru W3 mono Regular, san-serif;
+}
+
+.tooltip {
+	font-family: Jost Regular, Muli, Century Gothic, Sarabun, san-serif;
+}
+
+main {
+	color: rgb(245, 245, 245);
+	background-color: rgb(25, 25, 25);
+}
+
+html {
+	background-color: rgb(25, 25, 25);
+}
+
+html #sidebar-wrapper .cuteform-modal-button {
+	color: rgb(255, 180, 220);
+}
+
+html #sidebar-wrapper input[type=text] {
+	color: rgb(255, 180, 220);
+}
+
+html #sidebar-wrapper select {
+	color: rgb(255, 180, 220);
+}
+
+html a:hover,
+html a:focus,
+html .btn-link:hover,
+html .bth-link:focus {
+	color: #FFC6F5;
+}
+
+html a,
+html .btn-link {
+	color: #FF85DA;
+}
+
+html .text-main {
+	color: #FFC6F5;
+}
+
+body.homepage .activities-container.with-background {
+	background: rgb(25, 25, 25);
+}
+
+body.homepage .top_buttons {
+	background: transparent;
+}
+
+html body.homepage .home-wrapper .nav-tabs>li.active>a {
+	background-color: rgb(25, 25, 25);
+}
+
+html body.homepage .home-wrapper .nav-tabs>li:hover>a {
+	background-color: rgb(75, 75, 75);
+}
+
+.nav-tabs>li>a:hover {
+	border-bottom-color: transparent;
+}
+
+h4 small {
+	color: rgb(215, 215, 215);
+}
+
+#map-title {
+	background-color: rgb(50, 50, 50);
+}
+
+.navbar.navbar-fixed-top {
+	background-image: linear-gradient(280deg, rgb(50, 50, 50), rgb(125, 125, 125));
+	border-color: rgb(26, 21, 21);
+}
+
+html .navbar-main {
+	background-color: rgb(50, 50, 50);
+}
+
+html .navbar-main .navbar-nav>.open>a,
+html .navbar-main .navbar-nav>.open>a:hover,
+html .navbar-main .navbar-nav>.open>a:focus {
+	background-color: rgb(25, 25, 25);
+}
+
+.navbar .dropdown-menu .dropdown-header.large {
+	background-color: rgb(25, 25, 25);
+}
+
+html #sidebar-wrapper {
+	background-color: rgb(40, 40, 40);
+}
+
+html #togglebutton {
+	background-color: rgb(75, 75, 75);
+	background: rgb(75, 75, 75);
+}
+
+html #togglebutton:hover,
+html .togglebutton:hover {
+	background-color: #612f56;
+}
+
+html .navbar-main .dropdown-menu>.active>a:hover {
+	background-color: rgb(35, 35, 35);
+}
+
+html .navbar-main .dropdown-menu>.active>a {
+	background-color: rgb(25, 25, 25);
+}
+
+#sidebar-wrapper .sticky-buttons {
+	border-top: 5px dashed rgb(75, 75, 75);
+	background-color: rgb(50, 50, 50);
+}
+
+html #sidebar-wrapper h4 {
+	background-color: rgb(75, 75, 75);
+}
+
+html #sidebar-wrapper .cuteform-elt {
+	border-color: rgb(150, 150, 150);
+}
+
+html .list-group-item.active,
+html .list-group-item.active:focus,
+html .list-group-item.active:hover {
+	background-color: rgb(75, 75, 75);
+	border-color: rgb(255, 255, 255);
+}
+
+html .btn-secondary,
+html a.btn-secondary {
+	background-color: #e10b80;
+	border-color: #e10b80;
+}
+
+html .progress-bar-secondary {
+	background-color: #e10b80;
+}
+
+/**html .btn-main, html a.btn-main{
+ 	background-color: rgb(100,100,100);
+    border-color: rgb(100,100,100);
+}**/
+
+html .table-main td {
+	background-color: rgb(75, 75, 75);
+}
+
+body.homepage .home-text-ribbon {
+	background: rgb(75, 75, 75);
+}
+
+body.homepage .home-text-ribbon:before,
+body.homepage .home-text-ribbon:after {
+	border: 1.5em solid rgb(75, 75, 75);
+}
+
+.dropdown-header {
+	color: rgb(225, 225, 225);
+}
+
+.dropdown-menu {
+	background-color: rgb(65, 65, 65);
+	border: none;
+}
+
+.dropdown-menu>li>a {
+	color: rgb(215, 215, 215);
+}
+
+.dropdown-menu>li>a:hover {
+	color: rgb(255, 255, 255);
+	background-color: rgb(100, 100, 100);
+}
+
+.nav-tabs>li.active>a:hover {
+	background-color: rgb(35, 35, 35);
+	color: rgb(225, 225, 225);
+}
+
+.nav-tabs>li.active>a {
+	background-color: rgb(35, 35, 35);
+	color: rgb(225, 225, 225);
+}
+
+.nav-tabs>li.active>a,
+.nav-tabs>li.active>a:focus {
+	background-color: rgb(25, 25, 25);
+	color: rgb(225, 225, 225);
+}
+
+.nav>li>a:focus,
+.nav>li>a:hover {
+	background-color: rgb(75, 75, 75);
+	color: rgb(200, 200, 200);
+}
+
+.notification.notification-seen {
+	background-color: rgb(50, 50, 50);
+}
+
+.progress-bar-natural {
+	color: rgb(65, 65, 65);
+}
+
+.btn-natural,
+a.btn-natural {
+	color: rgb(65, 65, 65);
+}
+
+.btn-natural.disabled {
+	color: rgb(65, 65, 65);
+}
+
+.private-message.left .message-content {
+	background-color: rgb(75, 75, 75);
+}
+
+.jumbotron {
+	background-color: rgb(25, 25, 25);
+}
+
+.panel {
+	background-color: rgb(25, 25, 25);
+}
+
+.activity {
+	background-color: transparent;
+}
+
+.list-group-item {
+	background-color: transparent;
+}
+
+a.list-group-item {
+	color: rgb(215, 215, 215);
+}
+
+a.list-group-item:hover {
+	background-color: rgb(50, 50, 50);
+	color: rgb(255, 255, 255);
+}
+
+.help-block {
+	color: rgb(200, 200, 200);
+}
+
+.cuteform-modal-button {
+	background-color: rgb(75, 75, 75);
+}
+
+.modal-content {
+	background-color: rgb(65, 65, 65);
+}
+
+.modal-header {
+	color: rgb(245, 245, 245);
+	background-color: rgb(65, 65, 65);
+}
+
+.modal-body {
+	color: rgb(225, 225, 225);
+	background-color: rgb(65, 65, 65);
+}
+
+.close {
+	color: rgb(235, 235, 235);
+	text-shadow: none;
+}
+
+.close:focus,
+.close:hover {
+	color: rgb(255, 255, 255);
+	text-shadow: none;
+}
+
+.table-striped>tbody>tr:nth-of-type(odd) {
+	background-color: rgb(50, 50, 50);
+}
+
+#wiki-content table th {
+	background-color: rgb(25, 25, 25);
+}
+
+#wiki-content table tr:nth-child(2n) {
+	background-color: rgb(50, 50, 50);
+}
+
+.table .table {
+	background-color: rgb(50, 50, 50);
+}
+
+.form-control {
+	background-color: rgb(75, 75, 75);
+	color: rgb(225, 225, 225);
+}
+
+.user-badge.badge-color+.caption-wrapper .ribbon {
+	font-weight: 600;
+	background-color: #D1D1F6;
+	color: #3E3E48;
+}
+
+.popover-title,
+.popover {
+	border-bottom-color: rgb(50, 50, 50);
+	background-color: rgb(50, 50, 50);
+}
+
+.popover.bottom>.arrow,
+.popover.bottom>.arrow:after {
+	border-bottom-color: rgb(50, 50, 50);
+}
+
+.popover.left>.arrow,
+.popover.left>.arrow:after {
+	border-left-color: rgb(50, 50, 50);
+}
+
+.donate-month .progress {
+	background-color: rgb(75, 75, 75);
+	border: 2px solid rgb(225, 225, 225);
+}
+
+.progress-bar-danger {
+	/** Oh no **/
+	background-color: #d00600;
+}
+
+:not(.progress-bar.active) {
+	background-image: none;
+}
+
+.progress-bar-success {
+	background-color: #48af2e;
+}
