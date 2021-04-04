@@ -1,342 +1,677 @@
-body {
-	color: rgb(235, 235, 235);
-	font-family: Jost Regular, Muli, Century Gothic, Sarabun, MotoyaLMaru W3 mono Regular, san-serif;
+:root {
+
+    --motion: all;
+
+    --ontime: .1s;
+
+    --color1: rgb(30, 30, 30);
+    --color2: rgb(40, 40, 40);
+
+    --font_lg: muli, century gothic, san-serif;
+    --font_mkn: Jost Regular, MotoyaLMaru W3 mono Regular;
+
+    --font_kr: Noto Sans KR Regular;
+    --font_ch_sd: Noto San SC Regular;
+    --font_ch_tr: Noto San TC Regular;
+    --font_th: Sarabun;
 }
 
+body,
 .tooltip {
-	font-family: Jost Regular, Muli, Century Gothic, Sarabun, san-serif;
+    color: rgb(235, 235, 235);
+    font-family: var(--font_mkn), var(--font_lg), var(--font_lg);
+}
+
+body:lang(th),
+.tooltip:lang(th) {
+    font-family: var(--font_mkn), var(--font_th), var(--font_lg);
+}
+
+body:lang(kr),
+.tooltip:lang(kr) {
+    font-family: var(--font_mkn), var(--font_kr), var(--font_lg);
+}
+
+body:lang(zh-hans),
+.tooltip:lang(zh-hans) {
+    font-family: var(--font_mkn), var(--font_ch_sd), var(--font_lg);
+}
+
+body:lang(zh-hant),
+.tooltip:lang(zh-hant) {
+    font-family: var(--font_mkn), var(--font_ch_tr), var(--font_lg);
+}
+
+code {
+    font-family: var(--font_mkn), var(--font_lg);
+}
+
+pre {
+    color: #d8d8d8;
+    background-color: rgb(55, 55, 55);
+}
+
+body {
+    background-color: rgb(30, 30, 30);
 }
 
 main {
-	color: rgb(245, 245, 245);
-	background-color: rgb(25, 25, 25);
+    color: rgb(245, 245, 245);
+    background-color: rgb(30, 30, 30);
 }
 
 html {
-	background-color: rgb(25, 25, 25);
+    scroll-behavior: smooth;
+    background-color: rgb(30, 30, 30);
+}
+
+::-webkit-scrollbar {
+    width: 0.5em;
+    height: 0.5em;
+}
+
+::-webkit-scrollbar-corner {
+    background: rgb(50, 50, 50);
+}
+
+::-webkit-scrollbar-track {
+    background: rgb(50, 50, 50);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(253, 222, 36);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #f349a4;
 }
 
 html #sidebar-wrapper .cuteform-modal-button {
-	color: rgb(255, 180, 220);
+    color: rgb(255, 180, 220);
 }
 
 html #sidebar-wrapper input[type=text] {
-	color: rgb(255, 180, 220);
+    color: rgb(255, 180, 220);
 }
 
 html #sidebar-wrapper select {
-	color: rgb(255, 180, 220);
+    color: rgb(255, 180, 220);
+}
+
+html #sidebar-wrapper::-webkit-scrollbar {
+    width: 0.6em;
+}
+
+html #sidebar-wrapper::-webkit-scrollbar-track {
+    background: rgb(35, 35, 35);
+}
+
+html #sidebar-wrapper::-webkit-scrollbar-thumb {
+    background: hsl(50, 100%, 35%);
+}
+
+html #sidebar-wrapper::-webkit-scrollbar-thumb:hover {
+    background: hsl(323, 100%, 35%);
 }
 
 html a:hover,
 html a:focus,
+html a:active,
 html .btn-link:hover,
-html .bth-link:focus {
-	color: #FFC6F5;
+html .btn-link:focus,
+html .bth-link:active {
+    color: #FFC6F5;
 }
 
 html a,
 html .btn-link {
-	color: #FF85DA;
+    transition: var(--motion) var(--ontime) ease;
+    color: #FF85DA;
 }
 
 html .text-main {
-	color: #FFC6F5;
+    color: #FFC6F5;
+}
+
+html body.homepage .home-wrapper .nav-tabs > li > a {
+    transition: var(--motion) var(--ontime) ease;
+    border-color: rgb(255, 255, 255);
+    border-bottom-color: transparent;
+}
+
+body.homepage .about-art {
+    bottom: 89.5%;
+    left: 1.15%;
+    text-shadow: 0 0 .1em rgba(25, 25, 25, 0.5), 0 0 .1em rgba(25, 25, 25, 0.5), 0 0 .1em rgba(25, 25, 25, 0.5), 0 0 .1em rgba(25, 25, 25, 0.5), 0 0 .1em rgba(25, 25, 25, 0.5), 0 0 .1em rgba(25, 25, 25, 0.5);
 }
 
 body.homepage .activities-container.with-background {
-	background: rgb(25, 25, 25);
+    background: rgb(25, 25, 25);
+}
+
+body.homepage .home-wrapper + .activities-container.with-background {
+    box-shadow: 0 18px 30px 2px rgb(255 255 255 / 10%);
 }
 
 body.homepage .top_buttons {
-	background: transparent;
+    transition: var(--motion) var(--ontime) ease;
+    background: transparent;
 }
 
-html body.homepage .home-wrapper .nav-tabs>li.active>a {
-	background-color: rgb(25, 25, 25);
+body.homepage .home-transition svg path {
+    transition: var(--motion) var(--ontime) ease;
+    fill: rgb(25, 25, 25);
+    stroke: rgb(25, 25, 25);
 }
 
-html body.homepage .home-wrapper .nav-tabs>li:hover>a {
-	background-color: rgb(75, 75, 75);
+body.homepage .home-wrapper {
+    background-repeat: no-repeat;
 }
 
-.nav-tabs>li>a:hover {
-	border-bottom-color: transparent;
+body.homepage .home-text-ribbon.home-text-ribbon-logged-out .btn {
+    background-color: #f349a4;
+}
+
+html body.homepage .home-wrapper .nav-tabs > li.active > a,
+html body.homepage .home-wrapper .nav-tabs > li.focus > a {
+    background-color: rgb(25, 25, 25);
+}
+
+html body.homepage .home-wrapper .nav-tabs > li:hover > a {
+    background-color: rgb(75, 75, 75);
+}
+
+html body.homepage .home-wrapper .nav-tabs > li > a [class^=flaticon-]:not(.flaticon-search):not(.flaticon-toggler):not(.flaticon-about) {
+    transition: var(--motion) var(--ontime) ease;
+}
+
+.nav-tabs > li > a:hover {
+    border-bottom-color: transparent;
 }
 
 h4 small {
-	color: rgb(215, 215, 215);
+    color: rgb(215, 215, 215);
 }
 
 #map-title {
-	background-color: rgb(50, 50, 50);
+    background-color: rgb(50, 50, 50);
 }
 
 .navbar.navbar-fixed-top {
-	background-image: linear-gradient(280deg, rgb(50, 50, 50), rgb(125, 125, 125));
-	border-color: rgb(26, 21, 21);
+    transition: var(--motion) .1s ease;
+    background-image: linear-gradient(280deg, rgb(50, 50, 50), rgb(125, 125, 125));
+    border-color: rgb(25, 25, 25);
 }
 
 html .navbar-main {
-	background-color: rgb(50, 50, 50);
+    transition: var(--motion) .1s ease;
+    background-color: rgb(50, 50, 50);
 }
 
-html .navbar-main .navbar-nav>.open>a,
-html .navbar-main .navbar-nav>.open>a:hover,
-html .navbar-main .navbar-nav>.open>a:focus {
-	background-color: rgb(25, 25, 25);
+html .navbar-main .navbar-nav > .active > a,
+html .navbar-main .navbar-nav > .active > a:hover,
+html .navbar-main .navbar-nav > .active > a:focus,
+html .navbar-main .navbar-nav > .active > a:active {
+    background-color: rgb(42, 42, 42);
+}
+
+html .navbar-main .navbar-nav > .open > a,
+html .navbar-main .navbar-nav > .open > a:hover,
+html .navbar-main .navbar-nav > .open > a:focus,
+html .navbar-main .navbar-nav > .open > a:active {
+    background-color: rgb(25, 25, 25);
+}
+
+html .navbar-main .navbar-nav > .focus > a,
+html .navbar-main .navbar-nav > .focus > a:hover,
+html .navbar-main .navbar-nav > .focus > a:focus,
+html .navbar-main .navbar-nav > .focus > a:active {
+    background-color: rgb(25, 25, 25);
 }
 
 .navbar .dropdown-menu .dropdown-header.large {
-	background-color: rgb(25, 25, 25);
+    transition: var(--motion) .1s ease;
+    background-color: rgb(25, 25, 25);
 }
 
 html #sidebar-wrapper {
-	background-color: rgb(40, 40, 40);
+    background-color: rgb(40, 40, 40);
 }
 
 html #togglebutton {
-	background-color: rgb(75, 75, 75);
-	background: rgb(75, 75, 75);
+    background-color: rgb(75, 75, 75);
 }
 
 html #togglebutton:hover,
 html .togglebutton:hover {
-	background-color: #612f56;
+    background-color: #612f56;
 }
 
-html .navbar-main .dropdown-menu>.active>a:hover {
-	background-color: rgb(35, 35, 35);
+html .navbar-main .dropdown-menu > .active > a:hover,
+html .navbar-main .dropdown-menu > .active > a:focus,
+html .navbar-main .dropdown-menu > .active > a:active {
+    background-color: rgb(35, 35, 35);
 }
 
-html .navbar-main .dropdown-menu>.active>a {
-	background-color: rgb(25, 25, 25);
+html .navbar-main .dropdown-menu > .active > a {
+    background-color: rgb(25, 25, 25);
 }
 
 #sidebar-wrapper .sticky-buttons {
-	border-top: 5px dashed rgb(75, 75, 75);
-	background-color: rgb(50, 50, 50);
+    border-top: 5px dashed rgb(75, 75, 75);
+    background-color: rgb(50, 50, 50);
 }
 
 html #sidebar-wrapper h4 {
-	background-color: rgb(75, 75, 75);
+    background-color: rgb(75, 75, 75);
 }
 
 html #sidebar-wrapper .cuteform-elt {
-	border-color: rgb(150, 150, 150);
+    border-color: rgb(40, 40, 40);
 }
 
 html .list-group-item.active,
 html .list-group-item.active:focus,
-html .list-group-item.active:hover {
-	background-color: rgb(75, 75, 75);
-	border-color: rgb(255, 255, 255);
+html .list-group-item.active:hover,
+html .list-group-item.active:active {
+    background-color: rgb(75, 75, 75);
+    border-color: rgb(255, 255, 255);
 }
 
 html .btn-secondary,
 html a.btn-secondary {
-	background-color: #e10b80;
-	border-color: #e10b80;
+    transition: var(--motion) var(--ontime) ease;
+    background-color: #e10b80;
+    border-color: #e10b80;
 }
 
 html .progress-bar-secondary {
-	background-color: #e10b80;
+    transition: var(--motion) var(--ontime) ease;
+    background-color: #e10b80;
 }
 
 /**html .btn-main, html a.btn-main{
  	background-color: rgb(100,100,100);
     border-color: rgb(100,100,100);
 }**/
-
 html .table-main td {
-	background-color: rgb(75, 75, 75);
+    transition: var(--motion) var(--ontime) ease;
+    background-color: rgb(75, 75, 75);
+}
+
+html .cuteform-elt {
+    transition: var(--motion) .1s ease;
+}
+
+html .current-settings #id_i_type + .cuteform .cuteform-elt:not([data-cuteform-text="---------"]).cuteform-selected {
+    background-color: hsl(51, 100%, 41%);
+    border-color: hsl(51, 100%, 41%);
+}
+
+html .cuteform-elt.cuteform-selected {
+    border-color: rgb(253, 222, 36);
 }
 
 body.homepage .home-text-ribbon {
-	background: rgb(75, 75, 75);
+    background: rgb(75, 75, 75);
 }
 
 body.homepage .home-text-ribbon:before,
 body.homepage .home-text-ribbon:after {
-	border: 1.5em solid rgb(75, 75, 75);
+    border: 1.5em solid rgb(75, 75, 75);
+}
+
+[data-item=voiceactress] .voiceactress-image,
+[data-item=idol] .idol-image {
+    border: 3px solid rgb(255, 255, 255);
+}
+
+[data-item=voiceactress] .mini-idol {
+    border: 2px solid rgb(123, 123, 123);
+}
+
+.activity .activity-image img,
+.youtube-embed-container,
+.avatar.img-responsive {
+    background-color: rgba(75, 75, 75, 0.25);
+}
+
+.alert-danger {
+    color: #c30400;
+    background-color: #ffc6c6;
+    border: 1px solid #ffc6c6;
+}
+
+h1.text-danger {
+    font-size: 1em;
+    color: #c30400;
+}
+
+.default-index.index-authenticated .home-site-logo {
+    padding-bottom: 0.5em;
+    -webkit-box-reflect: below -1.5em linear-gradient(to bottom, rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.1));
+}
+
+body.homepage .default-index.index-not-authenticated {
+    padding-top: 0;
+    padding-bottom: 25%;
+}
+
+.page-title-prefixes a {
+    color: rgb(200, 200, 200);
 }
 
 .dropdown-header {
-	color: rgb(225, 225, 225);
+    color: rgb(225, 225, 225);
 }
 
 .dropdown-menu {
-	background-color: rgb(65, 65, 65);
-	border: none;
+    background-color: rgb(65, 65, 65);
+    border: none;
 }
 
-.dropdown-menu>li>a {
-	color: rgb(215, 215, 215);
+.dropdown-menu > li > a {
+    transition: var(--motion) .1s ease-out;
+    color: rgb(215, 215, 215);
 }
 
-.dropdown-menu>li>a:hover {
-	color: rgb(255, 255, 255);
-	background-color: rgb(100, 100, 100);
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:active,
+.dropdown-menu > li > a:focus {
+    color: rgb(255, 255, 255);
+    background-color: rgb(100, 100, 100);
 }
 
-.nav-tabs>li.active>a:hover {
-	background-color: rgb(35, 35, 35);
-	color: rgb(225, 225, 225);
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:active,
+.nav-tabs > li.active > a:focus {
+    background-color: rgb(35, 35, 35);
+    color: rgb(225, 225, 225);
 }
 
-.nav-tabs>li.active>a {
-	background-color: rgb(35, 35, 35);
-	color: rgb(225, 225, 225);
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:focus {
+    background-color: rgb(25, 25, 25);
+    color: rgb(225, 225, 225);
 }
 
-.nav-tabs>li.active>a,
-.nav-tabs>li.active>a:focus {
-	background-color: rgb(25, 25, 25);
-	color: rgb(225, 225, 225);
-}
-
-.nav>li>a:focus,
-.nav>li>a:hover {
-	background-color: rgb(75, 75, 75);
-	color: rgb(200, 200, 200);
+.nav > li > a:focus,
+.nav > li > a:hover {
+    background-color: rgb(75, 75, 75);
+    color: rgb(200, 200, 200);
 }
 
 .notification.notification-seen {
-	background-color: rgb(50, 50, 50);
+    background-color: rgb(50, 50, 50);
 }
 
 .progress-bar-natural {
-	color: rgb(65, 65, 65);
+    color: rgb(65, 65, 65);
+}
+
+.about-table .text_with_link_image {
+    padding-left: 20px;
+}
+
+.table-buttons td {
+    transition: all 0.1s ease;
 }
 
 .btn-natural,
 a.btn-natural {
-	color: rgb(65, 65, 65);
+    color: rgb(65, 65, 65);
+}
+.btn-natural:hover,
+a.btn-natural:hover {
+    color: rgb(0, 0, 0);
 }
 
 .btn-natural.disabled {
-	color: rgb(65, 65, 65);
+    color: rgb(65, 65, 65);
+}
+
+.btn-success {
+    background-color: rgb(3, 153, 10);
+    border-color: rgb(3, 153, 10);
+}
+
+.btn.disabled {
+    transition: var(--motion) var(--ontime) ease;
+    cursor: default;
+    /** No clue why they need to set this to "not-allowed"... **/
+    opacity: 50%;
+}
+
+.btn.btn-xs.skill-level {
+    font-weight: 550;
+    opacity: 100%;
+    font-style: italic;
 }
 
 .private-message.left .message-content {
-	background-color: rgb(75, 75, 75);
+    background-color: rgb(75, 75, 75);
 }
 
 .jumbotron {
-	background-color: rgb(25, 25, 25);
+    background-color: rgb(25, 25, 25);
+}
+
+.carousel-control {
+    transition: var(--motion) var(--ontime) ease;
+}
+
+.carousel-control:hover {
+    cursor: pointer;
 }
 
 .panel {
-	background-color: rgb(25, 25, 25);
+    background-color: rgb(25, 25, 25);
+}
+
+.panel-default-account.playground .panel-body {
+    background-image: linear-gradient(45deg, var(--color1) 25%, var(--color2) 25%, var(--color2) 50%, var(--color1) 50%, var(--color1) 75%, var(--color2) 75%, var(--color2) 100%);
+}
+
+.get_started.container2 .row {
+    margin-bottom: 4%;
 }
 
 .activity {
-	background-color: transparent;
+    background-color: transparent;
 }
 
 .list-group-item {
-	background-color: transparent;
+    background-color: transparent;
 }
 
 a.list-group-item {
-	color: rgb(215, 215, 215);
+    transition: var(--motion) var(--ontime) ease;
+    color: rgb(215, 215, 215);
 }
 
 a.list-group-item:hover {
-	background-color: rgb(50, 50, 50);
-	color: rgb(255, 255, 255);
+    background-color: rgb(50, 50, 50);
+    color: rgb(235, 235, 235);
+}
+
+a.list-group-item:focus,
+a.list-group-item:active {
+    background-color: rgb(100, 100, 100);
+    color: rgb(250, 250, 250);
 }
 
 .help-block {
-	color: rgb(200, 200, 200);
+    color: rgb(200, 200, 200);
 }
 
 .cuteform-modal-button {
-	background-color: rgb(75, 75, 75);
+    transition: var(--motion) var(--ontime) ease;
+    background-color: rgb(75, 75, 75);
+}
+
+.modal-lg {
+    width: 78.5%;
 }
 
 .modal-content {
-	background-color: rgb(65, 65, 65);
+    transition: var(--motion) var(--ontime) ease;
+    background-color: rgb(65, 65, 65);
 }
 
 .modal-header {
-	color: rgb(245, 245, 245);
-	background-color: rgb(65, 65, 65);
+    transition: var(--motion) var(--ontime) ease;
+    color: rgb(245, 245, 245);
+    background-color: rgb(65, 65, 65);
 }
 
 .modal-body {
-	color: rgb(225, 225, 225);
-	background-color: rgb(65, 65, 65);
+    transition: var(--motion) var(--ontime) ease;
+    color: rgb(225, 225, 225);
+    background-color: rgb(65, 65, 65);
 }
 
 .close {
-	color: rgb(235, 235, 235);
-	text-shadow: none;
+    color: rgb(235, 235, 235);
+    text-shadow: none;
 }
 
 .close:focus,
 .close:hover {
-	color: rgb(255, 255, 255);
-	text-shadow: none;
+    color: rgb(255, 255, 255);
+    text-shadow: none;
 }
 
-.table-striped>tbody>tr:nth-of-type(odd) {
-	background-color: rgb(50, 50, 50);
+.corner-popup {
+    background-color: rgba(50, 50, 50, 0.95);
+    border: 2px solid rgb(30, 30, 30);
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) {
+    background-color: rgb(50, 50, 50);
 }
 
 #wiki-content table th {
-	background-color: rgb(25, 25, 25);
+    transition: var(--motion) var(--ontime) ease;
+    background-color: rgb(25, 25, 25);
 }
 
 #wiki-content table tr:nth-child(2n) {
-	background-color: rgb(50, 50, 50);
+    background-color: rgb(50, 50, 50);
 }
 
 .table .table {
-	background-color: rgb(50, 50, 50);
+    transition: var(--motion) var(--ontime) ease;
+    background-color: rgb(50, 50, 50);
 }
 
 .form-control {
-	background-color: rgb(75, 75, 75);
-	color: rgb(225, 225, 225);
+    background-color: rgb(75, 75, 75);
+    color: rgb(225, 225, 225);
 }
 
-.user-badge.badge-color+.caption-wrapper .ribbon {
-	font-weight: 600;
-	background-color: #D1D1F6;
-	color: #3E3E48;
+.badges .mini-badge.badge-color .flaticon-more {
+    color: #4646FF;
+}
+
+.badges .text-badge-color {
+    color: white;
+}
+
+.jumbotron .popover {
+    color: rgba(220, 220, 220, 0.9);
+}
+
+.user-badge.badge-color + .caption-wrapper .ribbon {
+    font-weight: 600;
+    background-color: #D1D1F6;
+    color: #3E3E48;
+}
+
+.user-badge.badge-color2 + .caption-wrapper .ribbon {
+    color: rgb(50, 50, 50);
 }
 
 .popover-title,
 .popover {
-	border-bottom-color: rgb(50, 50, 50);
-	background-color: rgb(50, 50, 50);
+    border-bottom-color: rgb(50, 50, 50);
+    background-color: rgb(50, 50, 50);
 }
 
-.popover.bottom>.arrow,
-.popover.bottom>.arrow:after {
-	border-bottom-color: rgb(50, 50, 50);
+.popover.bottom > .arrow,
+.popover.bottom > .arrow:after {
+    border-bottom-color: rgb(50, 50, 50);
 }
 
-.popover.left>.arrow,
-.popover.left>.arrow:after {
-	border-left-color: rgb(50, 50, 50);
+.popover.left > .arrow,
+.popover.left > .arrow:after {
+    border-left-color: rgb(50, 50, 50);
+}
+
+.popover.right > .arrow,
+.popover.right > .arrow:after {
+    border-right-color: rgb(50, 50, 50);
+}
+
+.popover.top > .arrow,
+.popover.top > .arrow:after {
+    border-top-color: rgb(50, 50, 50);
 }
 
 .donate-month .progress {
-	background-color: rgb(75, 75, 75);
-	border: 2px solid rgb(225, 225, 225);
+    background-color: rgb(75, 75, 75);
+    border: 2px solid rgb(225, 225, 225);
+}
+
+.jumbotron-natural a {
+    color: rgb(50, 50, 50);
+}
+
+.jumbotron-natural,
+.jumbotron-natural h1,
+.jumbotron-natural h2,
+.jumbotron-natural h3,
+.jumbotron-natural h4,
+.jumbotron-natural h5,
+.jumbotron-natural h6 {
+    color: rgb(50, 50, 50);
+}
+
+.jumbotron-natural a:hover,
+.jumbotron-natural a:active,
+.jumbotron-natural a:after,
+.jumbotron-natural a:focus {
+    color: rgb(15, 15, 15);
+}
+
+.jumbotron-natural + div:not(.empty) table td {
+    color: rgb(50, 50, 50);
+}
+
+/* Donation */
+:not(.active).progress-bar {
+    background-image: none;
 }
 
 .progress-bar-danger {
-	/** Oh no **/
-	background-color: #d00600;
-}
-
-:not(.progress-bar.active) {
-	background-image: none;
+    /** OOF **/
+    background-color: #d00600;
 }
 
 .progress-bar-success {
-	background-color: #48af2e;
+    background-color: #48af2e;
+}
+
+/* Cloudflare gone die */
+.cf-error-source:after {
+    background-color: rgb(50, 50, 50);
+}
+
+.text-black-dark {
+    text-transform: uppercase;
+    color: rgb(255, 50, 50);
+}
+
+/* Rina Tenoji: Board of The Lost */
+.aprilFoolsPopup {
+    background: rgb(50, 50, 50);
 }
