@@ -1,3 +1,7 @@
+/*
+    Idol Story
+*/
+
 :root {
 
     --motion: all;
@@ -14,48 +18,36 @@
     --font_ch_sd: Noto San SC Regular;
     --font_ch_tr: Noto San TC Regular;
     --font_th: Sarabun;
+
+    --p_color: rgb(253, 222, 36)!important;
+    --p_color-dark: rgb(195, 170, 30)!important;
+    --s_color: rgb(255, 180, 220)!important;
+    --s_color-dark: rgb(245, 75, 165)!important;
 }
 
 body,
 .tooltip {
     color: rgb(235, 235, 235);
-    font-family: var(--font_mkn), var(--font_lg), var(--font_lg);
-}
-
-body:lang(th),
-.tooltip:lang(th) {
-    font-family: var(--font_mkn), var(--font_th), var(--font_lg);
-}
-
-body:lang(kr),
-.tooltip:lang(kr) {
-    font-family: var(--font_mkn), var(--font_kr), var(--font_lg);
-}
-
-body:lang(zh-hans),
-.tooltip:lang(zh-hans) {
-    font-family: var(--font_mkn), var(--font_ch_sd), var(--font_lg);
-}
-
-body:lang(zh-hant),
-.tooltip:lang(zh-hant) {
-    font-family: var(--font_mkn), var(--font_ch_tr), var(--font_lg);
+    font-family: var(--font_mkn), var(--font_kr), var(--font_th), var(--font_ch_tr), var(--font_ch_sd), var(--font_lg);
 }
 
 code {
-    font-family: var(--font_mkn), var(--font_lg);
+    font-family: var(--font_mkn), var(--font_kr), var(--font_th), var(--font_ch_tr), var(--font_ch_sd), var(--font_lg);
 }
 
 pre {
+    transition: all .1s ease;
     color: #d8d8d8;
     background-color: rgb(55, 55, 55);
 }
 
 body {
+    transition: all .1s ease;
     background-color: rgb(30, 30, 30);
 }
 
 main {
+    transition: all .1s ease;
     color: rgb(245, 245, 245);
     background-color: rgb(30, 30, 30);
 }
@@ -66,6 +58,7 @@ html {
 }
 
 ::-webkit-scrollbar {
+    border: 2px solid var(--p_color-dark);
     width: 0.5em;
     height: 0.5em;
 }
@@ -74,28 +67,28 @@ html {
     background: rgb(50, 50, 50);
 }
 
-::-webkit-scrollbar-track {
+:not(.padded-inner-sidebar) ::-webkit-scrollbar-track {
     background: rgb(50, 50, 50);
 }
 
 ::-webkit-scrollbar-thumb {
-    background: rgb(253, 222, 36);
+    background: var(--p_color);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #f349a4;
+    background: var(--s_color-dark);
 }
 
 html #sidebar-wrapper .cuteform-modal-button {
-    color: rgb(255, 180, 220);
+    color: var(--s_color);
 }
 
 html #sidebar-wrapper input[type=text] {
-    color: rgb(255, 180, 220);
+    color: var(--s_color);
 }
 
 html #sidebar-wrapper select {
-    color: rgb(255, 180, 220);
+    color: var(--s_color);
 }
 
 html #sidebar-wrapper::-webkit-scrollbar {
@@ -103,15 +96,16 @@ html #sidebar-wrapper::-webkit-scrollbar {
 }
 
 html #sidebar-wrapper::-webkit-scrollbar-track {
+    border-right: 1px solid rgb(25, 25, 25);
     background: rgb(35, 35, 35);
 }
 
 html #sidebar-wrapper::-webkit-scrollbar-thumb {
-    background: hsl(50, 100%, 35%);
+    background: var(--p_color-dark);
 }
 
 html #sidebar-wrapper::-webkit-scrollbar-thumb:hover {
-    background: hsl(323, 100%, 35%);
+    background: var(--s_color);
 }
 
 html a:hover,
@@ -120,17 +114,17 @@ html a:active,
 html .btn-link:hover,
 html .btn-link:focus,
 html .bth-link:active {
-    color: #FFC6F5;
+    color: rgb(255, 198, 245);
 }
 
 html a,
 html .btn-link {
     transition: var(--motion) var(--ontime) ease;
-    color: #FF85DA;
+    color: rgb(255, 133, 218);
 }
 
 html .text-main {
-    color: #FFC6F5;
+    color: rgb(255, 198, 245);
 }
 
 html body.homepage .home-wrapper .nav-tabs > li > a {
@@ -139,10 +133,34 @@ html body.homepage .home-wrapper .nav-tabs > li > a {
     border-bottom-color: transparent;
 }
 
+body.homepage .home-wrapper.with-gradient.right .home,
+body.current-homepage_arts .home-wrapper.with-gradient.right .home {
+    background-image: linear-gradient(95deg,
+    transparent,
+    rgba(255, 255, 255, 0.5),
+    rgba(255, 255, 255, 0.75),
+    rgba(255, 255, 255, 0.9),
+    rgba(255, 255, 255, 0.75),
+    rgba(255, 255, 255, 0.5),
+    transparent,
+    transparent,
+    transparent,
+    transparent,
+    transparent);
+}
+
 body.homepage .about-art {
     bottom: 89.5%;
     left: 1.15%;
-    text-shadow: 0 0 .1em rgba(25, 25, 25, 0.5), 0 0 .1em rgba(25, 25, 25, 0.5), 0 0 .1em rgba(25, 25, 25, 0.5), 0 0 .1em rgba(25, 25, 25, 0.5), 0 0 .1em rgba(25, 25, 25, 0.5), 0 0 .1em rgba(25, 25, 25, 0.5);
+    text-shadow: 0 0 .1em rgba(25, 25, 25, 0.5),
+    0 0 .1em rgba(25, 25, 25, 0.5),
+    0 0 .1em rgba(25, 25, 25, 0.5),
+    0 0 .1em rgba(25, 25, 25, 0.5),
+    0 0 .1em rgba(25, 25, 25, 0.5),
+    0 0 .1em rgba(25, 25, 25, 0.5),
+    0 0 .1em rgba(25, 25, 25, 0.5),
+    0 0 .1em rgba(25, 25, 25, 0.5),
+    0 0 .1em rgba(25, 25, 25, 0.5)
 }
 
 body.homepage .activities-container.with-background {
@@ -169,7 +187,7 @@ body.homepage .home-wrapper {
 }
 
 body.homepage .home-text-ribbon.home-text-ribbon-logged-out .btn {
-    background-color: #f349a4;
+    background-color: rgb(243, 73, 164);
 }
 
 html body.homepage .home-wrapper .nav-tabs > li.active > a,
@@ -198,8 +216,7 @@ h4 small {
 }
 
 .navbar.navbar-fixed-top {
-    transition: var(--motion) .1s ease;
-    background-image: linear-gradient(280deg, rgb(50, 50, 50), rgb(125, 125, 125));
+    background-image: linear-gradient(280deg, rgb(50, 50, 50), rgb(100, 100, 100));
     border-color: rgb(25, 25, 25);
 }
 
@@ -281,13 +298,13 @@ html .list-group-item.active:active {
 html .btn-secondary,
 html a.btn-secondary {
     transition: var(--motion) var(--ontime) ease;
-    background-color: #e10b80;
-    border-color: #e10b80;
+    background-color: rgb(225, 11, 128);
+    border-color: rgb(225, 11, 128);
 }
 
 html .progress-bar-secondary {
     transition: var(--motion) var(--ontime) ease;
-    background-color: #e10b80;
+    background-color: rgb(225, 11, 128);
 }
 
 /**html .btn-main, html a.btn-main{
@@ -304,8 +321,8 @@ html .cuteform-elt {
 }
 
 html .current-settings #id_i_type + .cuteform .cuteform-elt:not([data-cuteform-text="---------"]).cuteform-selected {
-    background-color: hsl(51, 100%, 41%);
-    border-color: hsl(51, 100%, 41%);
+    background-color: rgb(209, 178, 0);
+    border-color: rgb(209, 178, 0);
 }
 
 html .cuteform-elt.cuteform-selected {
@@ -330,6 +347,22 @@ body.homepage .home-text-ribbon:after {
     border: 2px solid rgb(123, 123, 123);
 }
 
+.carousel-indicators {
+    bottom: -5px;
+}
+
+.carousel-indicators li {
+    margin: 0;
+    width: 12px;
+    height: 12px;
+    background-color: rgba(0, 0, 0, 0.25);
+    border: 2px solid rgb(25, 25, 25);
+}
+
+.carousel-indicators .active {
+    background-color: rgb(253, 222, 36);
+}
+
 .activity .activity-image img,
 .youtube-embed-container,
 .avatar.img-responsive {
@@ -337,19 +370,19 @@ body.homepage .home-text-ribbon:after {
 }
 
 .alert-danger {
-    color: #c30400;
-    background-color: #ffc6c6;
-    border: 1px solid #ffc6c6;
+    color: rgb(195, 4, 0);
+    background-color: rgb(255, 198, 198);
+    border: 1px solid rgb(255, 198, 198);
 }
 
 h1.text-danger {
     font-size: 1em;
-    color: #c30400;
+    color: rgb(195, 4, 0);
 }
 
 .default-index.index-authenticated .home-site-logo {
-    padding-bottom: 0.5em;
-    -webkit-box-reflect: below -1.5em linear-gradient(to bottom, rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.1));
+    padding-bottom: 0.75em;
+    -webkit-box-reflect: below -70px linear-gradient(to bottom, rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.1));
 }
 
 body.homepage .default-index.index-not-authenticated {
@@ -359,6 +392,10 @@ body.homepage .default-index.index-not-authenticated {
 
 .page-title-prefixes a {
     color: rgb(200, 200, 200);
+}
+
+.page-title-small {
+    margin-bottom: 20px;
 }
 
 .dropdown-header {
@@ -422,7 +459,11 @@ a.btn-natural {
     color: rgb(65, 65, 65);
 }
 .btn-natural:hover,
-a.btn-natural:hover {
+a.btn-natural:hover,
+.btn-natural:active,
+a.btn-natural:active,
+.btn-natural:focus,
+a.btn-natural:focus {
     color: rgb(0, 0, 0);
 }
 
@@ -468,6 +509,15 @@ a.btn-natural:hover {
     background-color: rgb(25, 25, 25);
 }
 
+body.homepage .activities-container,
+body.current-homepage_arts .activities-container,
+body.homepage .top_buttons,
+body.current-homepage_arts .top_buttons,
+body.homepage .total-search-results,
+body.current-homepage_arts .total-search-results {
+    background-color: rgb(25, 25, 25);
+}
+
 .panel-default-account.playground .panel-body {
     background-image: linear-gradient(45deg, var(--color1) 25%, var(--color2) 25%, var(--color2) 50%, var(--color1) 50%, var(--color1) 75%, var(--color2) 75%, var(--color2) 100%);
 }
@@ -509,8 +559,8 @@ a.list-group-item:active {
     background-color: rgb(75, 75, 75);
 }
 
-.modal-lg {
-    width: 78.5%;
+.below-banners.to-markdown.markdowned {
+    padding-bottom: 1.8%;
 }
 
 .modal-content {
@@ -570,7 +620,7 @@ a.list-group-item:active {
 }
 
 .badges .mini-badge.badge-color .flaticon-more {
-    color: #4646FF;
+    color: rgb(70, 70, 255);
 }
 
 .badges .text-badge-color {
@@ -583,7 +633,7 @@ a.list-group-item:active {
 
 .user-badge.badge-color + .caption-wrapper .ribbon {
     font-weight: 600;
-    background-color: #D1D1F6;
+    background-color: rgb(209, 209, 246);
     color: #3E3E48;
 }
 
@@ -647,6 +697,177 @@ a.list-group-item:active {
     color: rgb(50, 50, 50);
 }
 
+.panel-natural > .panel-heading {
+    color: rgb(50, 50, 50);
+}
+
+.panel-natural .nav-tabs > li:not(.active) > a:not(:hover):not(:focus) {
+    color: rgb(50, 50, 50);
+}
+
+.contributor-profile .contributor-photo {
+    border: 3px solid rgb(253, 222, 36);
+}
+
+.contributor-profile .contributor-links .btn {
+    width: 17.5%;
+    height: 100%;
+    margin-top: -5px;
+    border: 2px solid rgb(253, 222, 36);
+}
+
+
+.staff-profile .staff-photo {
+    border: 4px solid rgb(243, 73, 164);
+}
+
+.staff-profile .staff-links .btn {
+    width: 17.5%;
+    height: 100%;
+    margin-top: -5px;
+    border: 2px solid rgb(243, 73, 164);
+}
+
+:not(.donator-profile-small).donator-profile .staff-photo {
+    border: 4px solid rgb(253, 222, 36);
+}
+
+.donator-profile.donator-profile-small .staff-photo {
+    border: 2px solid rgb(245, 245, 245);
+}
+
+.list-unstyled {
+    list-style: none;
+    text-align: center;
+}
+
+.form-control:focus {
+    border-color: rgb(253, 222, 36);
+    box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%), 0 0 8px rgb(253 222 36 / 60%);
+}
+
+/* Tablet-Size Mode */
+html .navbar-main .navbar-toggle {
+    background-color: transparent;
+}
+
+html .navbar-main .navbar-toggle:hover {
+    background-color: rgb(75, 75, 75);
+}
+
+html .navbar-main .navbar-toggle:focus,
+html .navbar-main .navbar-toggle:active {
+    background-color: rgb(15, 15, 15);
+}
+
+html .navbar-main .navbar-collapse {
+    border-color: rgb(50, 50, 50);
+}
+
+html .navbar-main .navbar-nav .open .dropdown-menu .divider {
+    background-color: rgb(255, 255, 255);
+}
+
+.navbar-nav .open .dropdown-menu {
+    background-color: rgb(60, 60, 60);
+}
+
+html .navbar-main .navbar-nav .open .dropdown-menu > .active > a,
+html .navbar-main .navbar-nav .open .dropdown-menu > .active > a:focus,
+html .navbar-main .navbar-nav .open .dropdown-menu > .active > a:hover,
+html .navbar-main .navbar-nav .open .dropdown-menu > .active > a:active {
+    color: rgb(253, 222, 35);
+    background-color: rgb(30, 30, 30);
+}
+
+/* No Javascript Mode */
+#switchLanguage {
+    font-size: 15px;
+    background-color: rgb(50, 50, 50);
+    color: rgb(255, 133, 218);
+}
+
+.pagination-sm > li > a,
+.pagination-sm > li > span {
+    padding: 5px 15px;
+    font-size: 15px;
+}
+.pagination {
+    border-radius: 4px;
+    margin: 40px 0;
+    border: 1px solid rgb(105, 105, 105);
+}
+
+.pagination > .disabled > a,
+.pagination > .disabled > a:hover,
+.pagination > .disabled > a:focus,
+.pagination > .disabled > span,
+.pagination > .disabled > span:hover,
+.pagination > .disabled > span:focus {
+    cursor: default;
+    border: none;
+    color: rgba(255, 255, 255, 0.3);
+    background-color: rgb(75, 75, 75);
+}
+
+html .pagination > li > a,
+html .pagination > li > span {
+    border: none;
+    cursor: default;
+    color: rgb(255, 255, 255);
+    background-color: rgb(75, 75, 75);
+}
+
+.pagination > li > a:hover,
+.pagination > li > a:focus,
+.pagination > li > span:hover,
+.pagination > li > span:focus {
+    cursor: pointer;
+    color: rgb(255, 153, 224);
+    border: none;
+    background-color: rgb(60, 60, 60);
+}
+
+html .pagination > .active > a,
+html .pagination > .active > a:hover,
+html .pagination > .active > a:focus,
+html .pagination > .active > span,
+html .pagination > .active > span:hover,
+html .pagination > .active > span:focus {
+    cursor: default;
+    color: rgba(255, 255, 255, 0.5);
+    border: none;
+    background-color: rgb(80, 48, 65);
+}
+
+/* ERROR */
+#error-page.container .jumbotron .col-md-4.hidden-sm.hidden-xs .img-responsive {
+    margin: 0 0!important;
+}
+
+.has-error .form-control {
+    border-color: rgb(255, 55, 55);
+}
+
+.has-error .form-control:active,
+.has-error .form-control:hover,
+.has-error .form-control:focus {
+    border-color: rgb(179, 37, 37);
+}
+
+.has-error .checkbox,
+.has-error .checkbox-inline,
+.has-error .control-label,
+.has-error .help-block,
+.has-error .radio,
+.has-error .radio-inline,
+.has-error.checkbox label,
+.has-error.checkbox-inline label,
+.has-error.radio label,
+.has-error.radio-inline label {
+    color: rgba(255, 55, 55, 0.9);
+}
+
 /* Donation */
 :not(.active).progress-bar {
     background-image: none;
@@ -654,11 +875,11 @@ a.list-group-item:active {
 
 .progress-bar-danger {
     /** OOF **/
-    background-color: #d00600;
+    background-color: rgb(204, 6, 0);
 }
 
 .progress-bar-success {
-    background-color: #48af2e;
+    background-color: rgb(72, 175, 46);
 }
 
 /* Cloudflare gone die */
